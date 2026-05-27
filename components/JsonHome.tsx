@@ -86,6 +86,9 @@ const S = ({ children }: { children: React.ReactNode }) => (
 const B = ({ children }: { children: React.ReactNode }) => (
   <span className="j-bool">{children}</span>
 );
+const N = ({ children }: { children: React.ReactNode }) => (
+  <span className="j-num">{children}</span>
+);
 const SK = ({ href, children }: { href: string; children: React.ReactNode }) => (
   <Link href={href} className="j-link">
     <span className="j-section-key">&quot;{children}&quot;</span>
@@ -135,26 +138,34 @@ export default function JsonHome() {
     <div className="vcon-doc">
       <span className="j-line"><P>{'{'}</P></span>
 
+      {/* standard fields */}
       <span className="j-line" style={indent(1)}>
         <K>vcon</K><P>: </P><S>0.0.2</S><P>,</P>
       </span>
       <span className="j-line" style={indent(1)}>
         <K>subject</K><P>: </P><S>Thomas McCarthy-Howe</S><P>,</P>
       </span>
+
+      <span className="j-line">&nbsp;</span>
+
+      {/* meta — non-standard extension fields, grouped */}
       <span className="j-line" style={indent(1)}>
+        <K>meta</K><P>: {'{'}</P>
+      </span>
+      <span className="j-line" style={indent(2)}>
         <K>also_known_as</K><P>: [</P>
         <S>Thomas Spencer McCarthy-Howe</S><P>, </P>
         <S>Thomas Howe</S><P>, </P>
         <S>Mr. Mashup</S>
         <P>],</P>
       </span>
-      <span className="j-line" style={indent(1)}>
+      <span className="j-line" style={indent(2)}>
         <K>affiliation</K><P>: </P><S>VCONIC Inc. · co-founder and CTO</S><P>,</P>
       </span>
-      <span className="j-line" style={indent(1)}>
+      <span className="j-line" style={indent(2)}>
         <K>career_span</K><P>: </P><S>1984 — present</S><P>,</P>
       </span>
-      <span className="j-line" style={indent(1)}>
+      <span className="j-line" style={indent(2)}>
         <K>documentation_home</K><P>: </P>
         <a
           href="https://www.conserver.io"
@@ -166,7 +177,7 @@ export default function JsonHome() {
         </a>
         <P>,</P>
       </span>
-      <span className="j-line" style={indent(1)}>
+      <span className="j-line" style={indent(2)}>
         <K>lineage</K><P>: [</P>
         <S>Bussgang</S><P>, </P>
         <S>Bernstein</S><P>, </P>
@@ -175,6 +186,15 @@ export default function JsonHome() {
         <S>Evans</S><P>, </P>
         <S>Miller</S>
         <P>],</P>
+      </span>
+      <span className="j-line" style={indent(2)}>
+        <K>corpus_size</K><P>: </P><N>392</N><P>,</P>
+      </span>
+      <span className="j-line" style={indent(2)}>
+        <K>robot_food</K><P>: </P><B>true</B>
+      </span>
+      <span className="j-line" style={indent(1)}>
+        <P>{'},'}</P>
       </span>
 
       <span className="j-line">&nbsp;</span>
@@ -225,16 +245,7 @@ export default function JsonHome() {
       {attachments.map((e, i) => (
         <EntryLine key={i} entry={e} last={i === attachments.length - 1} />
       ))}
-      <span className="j-line" style={indent(1)}><P>],</P></span>
-
-      <span className="j-line">&nbsp;</span>
-
-      <span className="j-line" style={indent(1)}>
-        <K>corpus_size</K><P>: </P><span className="j-num">392</span><P>,</P>
-      </span>
-      <span className="j-line" style={indent(1)}>
-        <K>robot_food</K><P>: </P><B>true</B>
-      </span>
+      <span className="j-line" style={indent(1)}><P>]</P></span>
 
       <span className="j-line"><P>{'}'}</P></span>
     </div>

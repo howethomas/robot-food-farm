@@ -1,9 +1,11 @@
 /**
  * The canonical vCon for the Robot Food Farm homepage.
  *
- * This is the "machine view" — the same document the human view renders, but
- * with the spec fields a program needs to verify, route, or archive it:
- * uuid, timestamps, identifiers, signatures, and full nested records.
+ * Standard spec fields are at the top level (vcon, uuid, created_at,
+ * subject, parties, dialog, analysis, attachments, signatures). Anything
+ * not part of the spec — biographical context, lineage, tagline, repo
+ * counts — lives inside `meta`, which is the spec's documented extension
+ * hook.
  *
  * Data sourced from github.com/howethomas/howe-corpus (corpus.yaml, 392 items).
  */
@@ -13,35 +15,42 @@ export const homepageVcon = {
   created_at: '2026-05-26T00:00:00Z',
   updated_at: '2026-05-26T00:00:00Z',
   subject: 'Thomas McCarthy-Howe',
-  also_known_as: ['Thomas Spencer McCarthy-Howe', 'Thomas Howe', 'Mr. Mashup'],
-  affiliation: {
-    current: 'VCONIC Inc. (co-founder and CTO, 2025-09)',
-    primary: 'Strolid (Partner and CTO, then advisory)',
-    standards: 'IETF vCon Working Group (co-chair, original author of the spec)',
+
+  meta: {
+    also_known_as: ['Thomas Spencer McCarthy-Howe', 'Thomas Howe', 'Mr. Mashup'],
+    affiliation: {
+      current: 'VCONIC Inc. (co-founder and CTO, 2025-09)',
+      primary: 'Strolid (Partner and CTO, then advisory)',
+      standards: 'IETF vCon Working Group (co-chair, original author of the spec)',
+    },
+    tagline: 'growing structured data for humans and machines',
+    career_span: '1984 — present',
+    documentation_home: 'https://www.conserver.io',
+    lineage: [
+      { name: 'Julian Bussgang', org: 'Signatron', era: '1980s', topic: 'meteor burst and troposcatter modems' },
+      { name: 'Jeff Bernstein', org: 'PictureTel', era: '1990s', topic: 'H.261 codec, first H.323 softclient' },
+      { name: 'Howard Resnikoff', org: 'Aware, Inc. + Analog Devices', era: 'mid-1990s', topic: 'first commercial DSL chipset (DMT)' },
+      { name: 'Henning Schulzrinne', org: 'Columbia / Sipcom', era: 'early 2000s', topic: 'commercializing SIP research' },
+      { name: 'Perry Evans', org: 'VCONIC', era: '2025 — present', topic: 'co-founder; Jabber Inc. veteran; ecosystem expansion playbook' },
+      { name: 'Jeremie Miller', org: 'VCONIC', era: '2025 — present', topic: 'co-founder; creator of Jabber / XMPP' },
+    ],
+    past_roles: [
+      { org: 'Signatron, Inc.', role: 'student engineer', era: 'mid-1980s' },
+      { org: 'PictureTel', role: 'engineer', era: 'late 1980s — 1990s' },
+      { org: 'Aware, Inc. + Analog Devices', role: 'partner engineer', era: 'mid-1990s' },
+      { org: 'Pingtel', role: 'UI and DSP architect (xpressa)', era: 'circa 2000' },
+      { org: 'Sipcom (Columbia U. spinout)', role: 'CTO', era: 'early 2000s' },
+      { org: 'Comverse Technology', role: 'U.S. CTO for VoIP', era: 'mid-2000s' },
+      { org: 'Tendigit', role: 'founder', era: 'circa 2009' },
+      { org: 'Mindful (post Alpine acquisition of Tendigit)', role: 'engineering leadership', era: '2010s' },
+      { org: 'Medallia (acquired Mindful, 2022)', role: 'integrated', era: '2022' },
+      { org: 'Strolid, Inc.', role: 'Partner and CTO, then advisory', era: '2022 — present' },
+      { org: 'VCONIC Inc.', role: 'co-founder and CTO', era: '2025-09 — present' },
+    ],
+    corpus_size: 392,
+    robot_food: true,
   },
-  career_span: '1984 — present',
-  lineage: [
-    { name: 'Julian Bussgang', org: 'Signatron', era: '1980s', topic: 'meteor burst and troposcatter modems' },
-    { name: 'Jeff Bernstein', org: 'PictureTel', era: '1990s', topic: 'H.261 codec, first H.323 softclient' },
-    { name: 'Howard Resnikoff', org: 'Aware, Inc. + Analog Devices', era: 'mid-1990s', topic: 'first commercial DSL chipset (DMT)' },
-    { name: 'Henning Schulzrinne', org: 'Columbia / Sipcom', era: 'early 2000s', topic: 'commercializing SIP research' },
-    { name: 'Perry Evans', org: 'VCONIC', era: '2025 — present', topic: 'co-founder; Jabber Inc. veteran; ecosystem expansion playbook' },
-    { name: 'Jeremie Miller', org: 'VCONIC', era: '2025 — present', topic: 'co-founder; creator of Jabber / XMPP' },
-  ],
-  past_roles: [
-    { org: 'Signatron, Inc.', role: 'student engineer', era: 'mid-1980s' },
-    { org: 'PictureTel', role: 'engineer', era: 'late 1980s — 1990s' },
-    { org: 'Aware, Inc. + Analog Devices', role: 'partner engineer', era: 'mid-1990s' },
-    { org: 'Pingtel', role: 'UI and DSP architect (xpressa)', era: 'circa 2000' },
-    { org: 'Sipcom (Columbia U. spinout)', role: 'CTO', era: 'early 2000s' },
-    { org: 'Comverse Technology', role: 'U.S. CTO for VoIP', era: 'mid-2000s' },
-    { org: 'Tendigit', role: 'founder', era: 'circa 2009' },
-    { org: 'Mindful (post Alpine acquisition of Tendigit)', role: 'engineering leadership', era: '2010s' },
-    { org: 'Medallia (acquired Mindful, 2022)', role: 'integrated', era: '2022' },
-    { org: 'Strolid, Inc.', role: 'Partner and CTO, then advisory', era: '2022 — present' },
-    { org: 'VCONIC Inc.', role: 'co-founder and CTO', era: '2025-09 — present' },
-  ],
-  tagline: 'growing structured data for humans and machines',
+
   parties: [
     {
       name: 'Thomas McCarthy-Howe',
@@ -196,7 +205,6 @@ export const homepageVcon = {
       url: 'https://github.com/vcon-dev',
     },
   ],
-  corpus_size: 392,
   signatures: [
     {
       alg: 'EdDSA',
@@ -204,5 +212,4 @@ export const homepageVcon = {
       sig: 'placeholder.signature.value',
     },
   ],
-  robot_food: true,
 };
