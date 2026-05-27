@@ -1,5 +1,13 @@
+import Link from 'next/link';
 import ViewAsVcon from '@/components/ViewAsVcon';
 import JsonHome from '@/components/JsonHome';
+
+const sections = [
+  { label: 'parties', href: '/parties' },
+  { label: 'dialog', href: '/dialog' },
+  { label: 'analysis', href: '/analysis' },
+  { label: 'attachments', href: '/attachments' },
+];
 
 const links = [
   { label: 'github · howethomas', href: 'https://github.com/howethomas' },
@@ -13,13 +21,23 @@ export default function Home() {
     <main className="mx-auto max-w-3xl px-6 py-16 md:py-24">
       <ViewAsVcon>
         <header className="mb-10">
-          <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted mb-5 flex items-center gap-3">
-            <span>document</span>
-            <span className="text-muted/60">/</span>
-            <span>vcon · 0.0.2</span>
-            <span className="text-muted/60">/</span>
-            <span>subject · robot food farm</span>
-          </div>
+          <nav
+            aria-label="Sections"
+            className="mb-8 flex flex-wrap items-center gap-x-5 gap-y-2 border-b border-rule pb-3 font-mono text-[12.5px]"
+          >
+            {sections.map((s) => (
+              <Link
+                key={s.href}
+                href={s.href}
+                className="text-muted hover:text-accent transition-colors"
+              >
+                {s.label}
+              </Link>
+            ))}
+            <span className="ml-auto text-muted/70 text-[11px]">
+              vcon · 0.0.2
+            </span>
+          </nav>
 
           <div className="flex flex-col sm:flex-row sm:items-start sm:gap-7">
             <img

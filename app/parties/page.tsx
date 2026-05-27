@@ -118,24 +118,6 @@ export default function Parties() {
         />
 
         <Entry
-          date="2009 — 2022"
-          kind="tendigit · mindful · medallia"
-          title="Founded Tendigit; acquired by Alpine; operated as Mindful; acquired by Medallia"
-          meta="callback and customer experience platform"
-          body={
-            <p>
-              Founded Tendigit, the callback and customer experience platform,
-              which was acquired by Alpine Investors and rebuilt as Mindful.
-              Medallia acquired Mindful in 2022, folding callback and
-              conversational orchestration into its experience management
-              portfolio. The conviction that came out of this run — that
-              conversational data is the most undertapped enterprise asset
-              class — became the founding thesis of the next chapter.
-            </p>
-          }
-        />
-
-        <Entry
           date="2012-06 — 2013-03"
           kind="l3harris technologies · system architect"
           title="Call Control Architect — US National Airspace Voice Service"
@@ -149,6 +131,24 @@ export default function Parties() {
               all the way back to Signatron: mission-critical voice,
               extracting reliable communication from unreliable channels,
               this time at FAA scale.
+            </p>
+          }
+        />
+
+        <Entry
+          date="2009 — 2022"
+          kind="tendigit · mindful · medallia"
+          title="Founded Tendigit; acquired by Alpine; operated as Mindful; acquired by Medallia"
+          meta="callback and customer experience platform"
+          body={
+            <p>
+              Founded Tendigit, the callback and customer experience platform,
+              which was acquired by Alpine Investors and rebuilt as Mindful.
+              Medallia acquired Mindful in 2022, folding callback and
+              conversational orchestration into its experience management
+              portfolio. The conviction that came out of this run — that
+              conversational data is the most undertapped enterprise asset
+              class — became the founding thesis of the next chapter.
             </p>
           }
         />
