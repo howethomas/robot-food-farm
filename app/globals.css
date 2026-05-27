@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  /* VSCode Light+ tokens */
+  --vsc-bg: #ffffff;
+  --vsc-fg: #000000;
+  --vsc-muted: #6c6c6c;
+  --vsc-rule: #e5e5e5;
+  --vsc-panel: #f3f3f3;
+  --vsc-accent: #007acc;
+  --vsc-link: #0066bf;
+  --vsc-selection: #add6ff;
+  /* JSON syntax */
+  --jKey: #0451a5;
+  --jStr: #a31515;
+  --jNum: #098658;
+  --jBool: #0000ff;
+}
+
+html, body {
+  background-color: var(--vsc-bg);
+  color: var(--vsc-fg);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--vsc-selection);
+  color: var(--vsc-fg);
+}
+
+/* Editor tab bar */
+.editor-tabs {
+  display: flex;
+  align-items: stretch;
+  background: var(--vsc-panel);
+  border-bottom: 1px solid var(--vsc-rule);
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  overflow-x: auto;
+}
+.editor-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.9rem;
+  background: var(--vsc-tab-inactive, #ececec);
+  color: #555;
+  border-right: 1px solid var(--vsc-rule);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.editor-tab:hover { color: #000; }
+.editor-tab.active {
+  background: var(--vsc-bg);
+  color: #000;
+  border-bottom: 1px solid var(--vsc-bg);
+  margin-bottom: -1px;
+  position: relative;
+}
+.editor-tab.active::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: var(--vsc-accent);
+}
+.editor-tab .dot {
+  width: 6px; height: 6px; border-radius: 999px;
+  background: var(--vsc-accent);
+  display: inline-block;
+}
+
+/* RFC-style horizontal rule, recolored for VSCode */
+.rfc-rule {
+  border: 0;
+  border-top: 1px solid var(--vsc-rule);
+  margin: 2rem 0;
+}
+
+/* vCon-shaped human field — VSCode flavored */
+.vcon-field {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding: 1rem 0 1.25rem 1rem;
+  border-left: 2px solid var(--vsc-rule);
+}
+.vcon-field + .vcon-field {
+  margin-top: 0.5rem;
+}
+.vcon-field:hover { border-left-color: var(--vsc-accent); }
+
+.vcon-key {
+  font-family: Menlo, Monaco, "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: var(--jKey);
+}
+.vcon-key::after {
+  content: ":";
+  color: var(--vsc-fg);
+  margin-left: 1px;
+}
+
+.vcon-meta {
+  font-family: Menlo, Monaco, "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 11.5px;
+  color: var(--vsc-muted);
+}
+
+.vcon-open {
+  font-family: Menlo, Monaco, "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 12.5px;
+  color: var(--vsc-link);
+  text-decoration: none;
+}
+.vcon-open:hover { text-decoration: underline; }
+
+/* JSON document on the homepage */
+.vcon-doc {
+  font-family: Menlo, Monaco, "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--vsc-fg);
+  background: var(--vsc-bg);
+  padding: 1rem 0;
+}
+.vcon-doc .j-line { display: block; }
+.vcon-doc .j-key { color: var(--jKey); }
+.vcon-doc .j-str { color: var(--jStr); }
+.vcon-doc .j-punc { color: var(--vsc-fg); }
+.vcon-doc .j-bool { color: var(--jBool); }
+.vcon-doc .j-num { color: var(--jNum); }
+
+.vcon-doc a.j-link {
+  color: var(--jStr);
+  text-decoration: none;
+}
+.vcon-doc a.j-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--vsc-accent);
+}
+.vcon-doc .j-section-key { color: var(--jKey); }
+
+/* Mono code block (machine view) */
+pre.machine {
+  font-family: Menlo, Monaco, "Cascadia Code", Consolas, "Courier New", monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  background: var(--vsc-bg);
+  border: 1px solid var(--vsc-rule);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+  white-space: pre;
+  color: var(--vsc-fg);
+}
+
+/* Status bar (bottom) */
+.status-bar {
+  background: var(--vsc-accent);
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 12px;
+}
+.status-bar a, .status-bar a:visited {
+  color: #ffffff;
+  text-decoration: none;
+}
+.status-bar a:hover {
+  background: rgba(255, 255, 255, 0.18);
+}

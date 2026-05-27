@@ -1,0 +1,16 @@
+# Netlify build config for Robot Food Farm.
+# next.config.mjs has output: 'export', so the build emits a static site
+# into ./out which Netlify serves directly. No serverless functions needed.
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Friendly URLs and 404 handling for the exported site.
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
