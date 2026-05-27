@@ -25,6 +25,8 @@ export const homepageVcon = {
     { name: 'Jeff Bernstein', org: 'PictureTel', era: '1990s', topic: 'H.261 codec, first H.323 softclient' },
     { name: 'Howard Resnikoff', org: 'Aware, Inc. + Analog Devices', era: 'mid-1990s', topic: 'first commercial DSL chipset (DMT)' },
     { name: 'Henning Schulzrinne', org: 'Columbia / Sipcom', era: 'early 2000s', topic: 'commercializing SIP research' },
+    { name: 'Perry Evans', org: 'VCONIC', era: '2025 — present', topic: 'co-founder; Jabber Inc. veteran; ecosystem expansion playbook' },
+    { name: 'Jeremie Miller', org: 'VCONIC', era: '2025 — present', topic: 'co-founder; creator of Jabber / XMPP' },
   ],
   past_roles: [
     { org: 'Signatron, Inc.', role: 'student engineer', era: 'mid-1980s' },

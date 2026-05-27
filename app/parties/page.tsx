@@ -156,15 +156,16 @@ export default function Parties() {
           date="2025-09 — present"
           kind="vconic, inc. · co-founder and cto"
           title="The commercial home for vCon"
-          meta="co-founders previously built Jabber and XMPP"
+          meta="with Perry Evans and Jeremie Miller"
           body={
             <p>
-              Spun out of Strolid in 2026 to operate the vCon standard and its
-              commercial platform independently. Co-founders previously built
-              Jabber and XMPP — the open standards behind global real-time
-              messaging — bringing the ecosystem-expansion playbook
-              complementary to protocol authorship and operator experience.
-              Patent-pending IP sits underneath the scalability layer.
+              Spun out of Strolid in 2026 to operate the vCon standard and
+              its commercial platform independently. Co-founded with Jeremie
+              Miller — creator of Jabber and XMPP, the open standards behind
+              global real-time messaging — and Perry Evans, the Jabber Inc.
+              veteran whose career is the canonical example of turning an
+              open standard into a commercial ecosystem. Patent-pending IP
+              sits underneath the scalability layer.
             </p>
           }
         />
@@ -173,7 +174,7 @@ export default function Parties() {
           date="2022 — present"
           kind="ietf vcon working group · co-chair"
           title="The standard"
-          meta="co-author Dan Petrie · in final ratification in 2026"
+          meta="co-author Dan Petrie · working group and standards track"
           body={
             <p>
               Original author of the IETF vCon specification: the first open
@@ -207,15 +208,19 @@ export default function Parties() {
 
         <Entry
           kind="lineage · through-line"
-          title="Bussgang → Bernstein → Resnikoff → Schulzrinne"
-          meta="four mentors across forty years"
+          title="Bussgang → Bernstein → Resnikoff → Schulzrinne → Evans, Miller"
+          meta="six names across four decades"
           body={
             <p>
               Bussgang at Signatron (1980s). Bernstein at PictureTel (1990s).
               Resnikoff at Aware (mid-1990s). Schulzrinne at Columbia/Sipcom
-              (early 2000s). Four names that connect troposcatter modems to
-              the conversation-as-object standard now in final IETF
-              ratification.
+              (early 2000s). Perry Evans and Jeremie Miller at VCONIC (2025
+              onward) — Miller the creator of Jabber and XMPP, Evans the
+              Jabber Inc. veteran who knows how an open standard turns into
+              a commercial ecosystem. The line runs from troposcatter modems
+              to the conversation-as-object standard now on the IETF
+              working group and standards track, and into the company that
+              operates it.
             </p>
           }
         />

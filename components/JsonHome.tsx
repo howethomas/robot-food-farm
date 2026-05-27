@@ -171,7 +171,9 @@ export default function JsonHome() {
         <S>Bussgang</S><P>, </P>
         <S>Bernstein</S><P>, </P>
         <S>Resnikoff</S><P>, </P>
-        <S>Schulzrinne</S>
+        <S>Schulzrinne</S><P>, </P>
+        <S>Evans</S><P>, </P>
+        <S>Miller</S>
         <P>],</P>
       </span>
 

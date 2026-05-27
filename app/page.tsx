@@ -33,11 +33,12 @@ export default function Home() {
               </h1>
               <p className="mt-4 font-sans text-lg leading-relaxed text-ink/85 max-w-prose">
                 Forty years of real-time communications engineering, from
-                troposcatter modems at Signatron to the IETF vCon standard now
-                in final ratification. The site renders the career as the thing
-                it is about: a vCon, with parties, dialog, analysis, and
-                attachments. The keys are navigable. The button above shows the
-                same document in its canonical form, signatures and all.
+                troposcatter modems at Signatron to the IETF vCon standard,
+                now a working group and standards-track document. The site
+                renders the career as the thing it is about: a vCon, with
+                parties, dialog, analysis, and attachments. The keys are
+                navigable. The button above shows the same document in its
+                canonical form, signatures and all.
               </p>
               <nav
                 aria-label="External profiles"
