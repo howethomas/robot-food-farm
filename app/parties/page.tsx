@@ -136,6 +136,24 @@ export default function Parties() {
         />
 
         <Entry
+          date="2012-06 — 2013-03"
+          kind="l3harris technologies · system architect"
+          title="Call Control Architect — US National Airspace Voice Service"
+          meta="fail-safe architecture · Melbourne, Florida"
+          body={
+            <p>
+              Call Control Architect and Systems Engineer for the redesign of
+              the US National Airspace Voice Service. Designed the innovative
+              fail-safe architecture for one of the most reliable
+              communications networks in the world. The work pulls the thread
+              all the way back to Signatron: mission-critical voice,
+              extracting reliable communication from unreliable channels,
+              this time at FAA scale.
+            </p>
+          }
+        />
+
+        <Entry
           date="2022 — present"
           kind="strolid · partner and cto, then advisory"
           title="Where vCon was incubated"

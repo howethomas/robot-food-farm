@@ -42,6 +42,7 @@ export const homepageVcon = {
       { org: 'Sipcom (Columbia U. spinout)', role: 'CTO', era: 'early 2000s' },
       { org: 'Comverse Technology', role: 'U.S. CTO for VoIP', era: 'mid-2000s' },
       { org: 'Tendigit', role: 'founder', era: 'circa 2009' },
+      { org: 'L3Harris Technologies (Melbourne, FL)', role: 'System Architect — Call Control, US National Airspace Voice Service', era: '2012-06 — 2013-03' },
       { org: 'Mindful (post Alpine acquisition of Tendigit)', role: 'engineering leadership', era: '2010s' },
       { org: 'Medallia (acquired Mindful, 2022)', role: 'integrated', era: '2022' },
       { org: 'Strolid, Inc.', role: 'Partner and CTO, then advisory', era: '2022 — present' },
