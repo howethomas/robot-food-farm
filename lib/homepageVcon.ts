@@ -10,7 +10,7 @@
  * Data sourced from github.com/howethomas/howe-corpus (corpus.yaml, 392 items).
  */
 export const homepageVcon = {
-  vcon: '0.0.2',
+  vcon: '0.4.0',
   uuid: '0192e7c4-rff0-7000-8000-robotfoodfarm00',
   created_at: '2026-05-26T00:00:00Z',
   updated_at: '2026-05-26T00:00:00Z',

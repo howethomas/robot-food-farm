@@ -140,7 +140,7 @@ export default function JsonHome() {
 
       {/* standard fields */}
       <span className="j-line" style={indent(1)}>
-        <K>vcon</K><P>: </P><S>0.0.2</S><P>,</P>
+        <K>vcon</K><P>: </P><S>0.4.0</S><P>,</P>
       </span>
       <span className="j-line" style={indent(1)}>
         <K>subject</K><P>: </P><S>Thomas McCarthy-Howe</S><P>,</P>

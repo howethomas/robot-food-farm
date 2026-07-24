@@ -35,7 +35,7 @@ export default function Home() {
               </Link>
             ))}
             <span className="ml-auto text-muted/70 text-[11px]">
-              vcon · 0.0.2
+              vcon · 0.4.0
             </span>
           </nav>
 
@@ -80,12 +80,6 @@ export default function Home() {
 
         <JsonHome />
 
-        <hr className="rfc-rule" />
-
-        <p className="font-sans italic text-muted max-w-prose">
-          Two readers. One document. The values you can click open the deeper
-          records. The values you cannot click are the ones that belong to a program.
-        </p>
       </ViewAsVcon>
     </main>
   );
